@@ -6,9 +6,9 @@
   <!-- 插件版本号 -->
   <version>1.0.0</version>
   <!-- 邮箱以及公司地址和公司名称 -->
-  <vendor email="leng_xiaoyu513@163.com" url="https://github.com/Wiser-Wong">Wiser</vendor>
+  <vendor email="leng_xiaoyu513@163.com" url="https://github.com/Wiser-Wong/Frame.git">Wiser</vendor>
   <!-- 插件功能说明，显示在插件市场当前插件的副标题位置。 -->
-  <description>与 Wiser Frame 架构配合使用，用来快速生成所需要的视图类以及相关的xml和业务类,架构地址：'https://github.com/Wiser-Wong/Frame.git'</description>
+  <description>与 Wiser Frame 架构配合使用，用来快速生成所需要的视图类以及相关的xml和业务类</description>
   <!-- 插件版本更新内容说明 -->
   <change-notes>首次版本更新，主要用途创建JavaClass类以及JavaBiz业务类，还有xml文件</change-notes>
 
