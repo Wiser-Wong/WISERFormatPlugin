@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22cb7cac-1e97-4a9d-94de-7358394ecf6f" name="Default Changelist" comment="Wiser Frame 框架 快速创建相关类 插件">
+    <list default="true" id="22cb7cac-1e97-4a9d-94de-7358394ecf6f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/CodeTool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/CodeTool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/DirTool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/DirTool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/InflateClass$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/InflateClass$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/InflateClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/InflateClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/action/WISERAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/action/WISERAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/action/WISERActionGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/action/WISERActionGroup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wiser/plugin/dialog/WiserPluginDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wiser/plugin/dialog/WiserPluginDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WISERFormatPlugin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wiser/plugin/dialog/WiserPluginDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wiser/plugin/dialog/WiserPluginDialog.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578153286613</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Wiser Frame 框架 快速创建相关类 插件">
+      <created>1578153612972</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578153612972</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Wiser Frame 框架 快速创建相关类 插件">
+      <created>1578153674392</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578153674392</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,10 +181,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="603" y="235" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1578116814331" />
-    <state x="446" y="127" key="CommitChangelistDialog2" timestamp="1578153612721">
+    <state x="446" y="127" key="CommitChangelistDialog2" timestamp="1578153674241">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="446" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1578153612721" />
+    <state x="446" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1578153674241" />
     <state x="167" y="94" key="DiffContextDialog" timestamp="1578153605953">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -259,10 +258,10 @@
     </state>
     <state x="341" y="155" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1578152610502" />
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1578068585896" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1578153615063">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1578153675978">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1578153615063" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1578153675978" />
     <state x="517" y="354" key="com.intellij.ide.util.TipDialog" timestamp="1578152493257">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

@@ -257,7 +257,7 @@ public class WiserPluginDialog extends JDialog {
 		radioButtonAdapter.setText("Adapter");
 		panel4.add(radioButtonAdapter, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
 		radioButtonService = new JRadioButton();
-		radioButtonService.setText("service");
+		radioButtonService.setText("Service");
 		panel4.add(radioButtonService, new GridConstraints(0, 3, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
 		final JPanel panel5 = new JPanel();
 		panel5.setLayout(new GridLayoutManager(1, 2, new Insets(10, 0, 0, 0), -1, -1));
