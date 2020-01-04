@@ -17,7 +17,7 @@ public class WISERAction extends AnAction {
 		super("Wiser Format Class");
 	}
 
-	@java.lang.Override public void actionPerformed(@NotNull AnActionEvent anActionEvent) {
+	@Override public void actionPerformed(@NotNull AnActionEvent anActionEvent) {
 		WiserPluginDialog.showPluginDialog(anActionEvent);
 	}
 }

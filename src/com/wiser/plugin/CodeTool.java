@@ -33,7 +33,7 @@ public class CodeTool {
                 "\n" +
                 "public class "+ className + "Activity" +" extends WISERActivity" + (isCreateBiz ? "<" + className + "ActivityBiz" + ">" : "") + " {\n" +
                 "\n" +
-                "\t@@Override protected WISERBuilder build(WISERBuilder builder) {\n" +
+                "\t@Override protected WISERBuilder build(WISERBuilder builder) {\n" +
                 "\t    builder.layoutId(R.layout." + "activity_" + className.toLowerCase() + ");\n" +
                 "\t\treturn builder;\n" +
                 "\t}\n" +

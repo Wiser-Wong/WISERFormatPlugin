@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
  */
 public class WISERActionGroup extends ActionGroup {
 
-	@NotNull @java.lang.Override public AnAction[] getChildren(@Nullable AnActionEvent anActionEvent) {
+	@NotNull @Override public AnAction[] getChildren(@Nullable AnActionEvent anActionEvent) {
 		return new AnAction[] { new WISERAction() };
 	}
 }

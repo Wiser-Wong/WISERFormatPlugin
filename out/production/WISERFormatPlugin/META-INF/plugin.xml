@@ -1,19 +1,16 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
-  <name>Plugin display name here</name>
-  <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
-
-  <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
-    ]]></description>
-
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>
-  </change-notes>
+  <!-- 插件 ID，用于在插件市场中唯一确定身份的标示，在不同版本中，必须保持一致。建议设置值为：包名 + 插件名称 -->
+  <id>com.wiser.plugin.format</id>
+  <!-- 插件的名称，显示在 IDEA 已安装插件列表中 -->
+  <name>Wiser Format Class</name>
+  <!-- 插件版本号 -->
+  <version>1.0.0</version>
+  <!-- 邮箱以及公司地址和公司名称 -->
+  <vendor email="leng_xiaoyu513@163.com" url="https://github.com/Wiser-Wong">Wiser</vendor>
+  <!-- 插件功能说明，显示在插件市场当前插件的副标题位置。 -->
+  <description>与 Wiser Frame 架构配合使用，用来快速生成所需要的视图类以及相关的xml和业务类,架构地址：'https://github.com/Wiser-Wong/Frame.git'</description>
+  <!-- 插件版本更新内容说明 -->
+  <change-notes>首次版本更新，主要用途创建JavaClass类以及JavaBiz业务类，还有xml文件</change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>
@@ -26,6 +23,7 @@
     <!-- Add your extensions here -->
   </extensions>
 
+  <!-- Action 注册 -->
   <actions>
     <!-- Add your actions here -->
     <group id="WISERActionGroup" class="com.wiser.plugin.action.WISERActionGroup" popup="true"

@@ -71,6 +71,7 @@
             </constraints>
             <properties>
               <text value="类名："/>
+              <toolTipText value="类名："/>
             </properties>
           </component>
           <component id="7bb50" class="javax.swing.JTextField" binding="textClassName">
