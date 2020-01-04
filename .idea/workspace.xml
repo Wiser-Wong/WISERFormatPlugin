@@ -182,10 +182,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="603" y="235" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1578116814331" />
-    <state x="446" y="127" key="CommitChangelistDialog2" timestamp="1578153286250">
+    <state x="446" y="127" key="CommitChangelistDialog2" timestamp="1578153612721">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="446" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1578153286250" />
+    <state x="446" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1578153612721" />
+    <state x="167" y="94" key="DiffContextDialog" timestamp="1578153605953">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="167" y="94" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1578153605953" />
     <state width="1638" height="267" key="GridCell.Tab.0.bottom" timestamp="1578153449606">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -255,10 +259,10 @@
     </state>
     <state x="341" y="155" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1578152610502" />
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1578068585896" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1578153293126">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1578153615063">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1578153293126" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1578153615063" />
     <state x="517" y="354" key="com.intellij.ide.util.TipDialog" timestamp="1578152493257">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
