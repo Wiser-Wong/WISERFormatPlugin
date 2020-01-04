@@ -7,9 +7,8 @@ import com.intellij.uiDesigner.core.Spacer;
 import com.wiser.plugin.InflateClass;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
-import java.util.Enumeration;
-import java.lang.*;
 
 /**
  * @author Wiser
@@ -34,7 +33,7 @@ public class WiserPluginDialog extends JDialog {
 
 	private JRadioButton radioButtonService;
 
-	private JComboBox comboBoxExpand;
+	private JComboBox<String> comboBoxExpand;
 
 	private JCheckBox checkBoxIsBiz;
 
@@ -97,7 +96,7 @@ public class WiserPluginDialog extends JDialog {
 			}
 		});
 
-		comboBoxExpand.addItemListener(new java.awt.event.ItemListener() {
+		comboBoxExpand.addItemListener(new ItemListener() {
 
 			public void itemStateChanged(ItemEvent itemEvent) {
 				selectExpandClassName = (String) itemEvent.getItem();
@@ -217,53 +216,63 @@ public class WiserPluginDialog extends JDialog {
 	 * @noinspection ALL
 	 */
 	private void $$$setupUI$$$() {
-		contentPane = new javax.swing.JPanel();
-		contentPane.setLayout(new GridLayoutManager(4, 2, new java.awt.Insets(15, 15, 15, 15), -1, -1));
-		final javax.swing.JPanel panel1 = new javax.swing.JPanel();
-		panel1.setLayout(new GridLayoutManager(1, 1, new java.awt.Insets(10, 0, 0, 0), -1, -1));
+		contentPane = new JPanel();
+		contentPane.setLayout(new GridLayoutManager(4, 2, new Insets(15, 15, 15, 15), -1, -1));
+		final JPanel panel1 = new JPanel();
+		panel1.setLayout(new GridLayoutManager(1, 1, new Insets(10, 0, 0, 0), -1, -1));
 		contentPane.add(panel1, new GridConstraints(3, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null, 0, false));
-		final javax.swing.JPanel panel2 = new javax.swing.JPanel();
-		panel2.setLayout(new GridLayoutManager(1, 4, new java.awt.Insets(0, 0, 0, 0), -1, -1));
+		final JPanel panel2 = new JPanel();
+		panel2.setLayout(new GridLayoutManager(1, 4, new Insets(0, 0, 0, 0), -1, -1));
 		panel1.add(panel2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-		buttonOK = new javax.swing.JButton();
+		buttonOK = new JButton();
+		buttonOK.setText("OK");
 		panel2.add(buttonOK, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-		buttonCancel = new javax.swing.JButton();
+		buttonCancel = new JButton();
+		buttonCancel.setText("Cancel");
 		panel2.add(buttonCancel, new GridConstraints(0, 3, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-		checkBoxIsBiz = new javax.swing.JCheckBox();
+		checkBoxIsBiz = new JCheckBox();
+		checkBoxIsBiz.setText("是否创建业务类");
 		panel2.add(checkBoxIsBiz, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
 		final Spacer spacer1 = new Spacer();
 		panel2.add(spacer1, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
-		final javax.swing.JPanel panel3 = new javax.swing.JPanel();
-		panel3.setLayout(new GridLayoutManager(1, 4, new java.awt.Insets(0, 0, 0, 0), -1, -1));
+		final JPanel panel3 = new JPanel();
+		panel3.setLayout(new GridLayoutManager(1, 4, new Insets(0, 0, 0, 0), -1, -1));
 		contentPane.add(panel3, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-		final javax.swing.JLabel label1 = new javax.swing.JLabel();
+		final JLabel label1 = new JLabel();
+		label1.setText("类名：");
+		label1.setToolTipText("类名：");
 		panel3.add(label1, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-		textClassName = new javax.swing.JTextField();
-		panel3.add(textClassName, new GridConstraints(0, 1, 1, 3, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new java.awt.Dimension(150, -1), null, 0, false));
-		final javax.swing.JPanel panel4 = new javax.swing.JPanel();
-		panel4.setLayout(new GridLayoutManager(1, 4, new java.awt.Insets(10, 0, 0, 0), -1, -1));
+		textClassName = new JTextField();
+		panel3.add(textClassName, new GridConstraints(0, 1, 1, 3, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+		final JPanel panel4 = new JPanel();
+		panel4.setLayout(new GridLayoutManager(1, 4, new Insets(10, 0, 0, 0), -1, -1));
 		contentPane.add(panel4, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-		final javax.swing.JLabel label2 = new javax.swing.JLabel();
+		final JLabel label2 = new JLabel();
+		label2.setText("类型：");
 		panel4.add(label2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-		radioButtonView = new javax.swing.JRadioButton();
+		radioButtonView = new JRadioButton();
+		radioButtonView.setText("View");
 		panel4.add(radioButtonView, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-		radioButtonAdapter = new javax.swing.JRadioButton();
+		radioButtonAdapter = new JRadioButton();
+		radioButtonAdapter.setText("Adapter");
 		panel4.add(radioButtonAdapter, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-		radioButtonService = new javax.swing.JRadioButton();
+		radioButtonService = new JRadioButton();
+		radioButtonService.setText("service");
 		panel4.add(radioButtonService, new GridConstraints(0, 3, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-		final javax.swing.JPanel panel5 = new javax.swing.JPanel();
-		panel5.setLayout(new GridLayoutManager(1, 2, new java.awt.Insets(10, 0, 0, 0), -1, -1));
+		final JPanel panel5 = new JPanel();
+		panel5.setLayout(new GridLayoutManager(1, 2, new Insets(10, 0, 0, 0), -1, -1));
 		contentPane.add(panel5, new GridConstraints(2, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-		final javax.swing.JLabel label3 = new javax.swing.JLabel();
+		final JLabel label3 = new JLabel();
+		label3.setText("继承：");
 		panel5.add(label3, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-		comboBoxExpand = new javax.swing.JComboBox();
+		comboBoxExpand = new JComboBox();
 		panel5.add(comboBoxExpand, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
 	}
 
 	/**
 	 * @noinspection ALL
 	 */
-	public javax.swing.JComponent $$$getRootComponent$$$() {
+	public JComponent $$$getRootComponent$$$() {
 		return contentPane;
 	}
 
