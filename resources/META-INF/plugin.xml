@@ -4,7 +4,7 @@
   <!-- 插件的名称，显示在 IDEA 已安装插件列表中 -->
   <name>Wiser Format Class</name>
   <!-- 插件版本号 -->
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <!-- 邮箱以及公司地址和公司名称 -->
   <vendor email="leng_xiaoyu513@163.com" url="https://github.com/Wiser-Wong/Frame.git">Wiser</vendor>
   <!-- 插件功能说明，显示在插件市场当前插件的副标题位置。 -->
