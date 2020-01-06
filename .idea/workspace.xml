@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22cb7cac-1e97-4a9d-94de-7358394ecf6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WISERFormatPlugin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/WISERFormatPlugin.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
-    </list>
+    <list default="true" id="22cb7cac-1e97-4a9d-94de-7358394ecf6f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578203164054</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Wiser Frame 框架 快速创建相关类 插件">
+      <created>1578278615959</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1578278615959</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -215,10 +217,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="603" y="235" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1578116814331" />
-    <state x="446" y="127" key="CommitChangelistDialog2" timestamp="1578203163821">
+    <state x="446" y="127" key="CommitChangelistDialog2" timestamp="1578278615717">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="446" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1578203163821" />
+    <state x="446" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1578278615717" />
     <state x="167" y="94" key="DiffContextDialog" timestamp="1578203177177">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -305,10 +307,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="498" y="160" width="683" height="729" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1578202419688" />
-    <state x="489" y="323" key="git4idea.merge.GitPullDialog" timestamp="1578155755658">
+    <state x="489" y="323" key="git4idea.merge.GitPullDialog" timestamp="1578278624583">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="489" y="323" key="git4idea.merge.GitPullDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1578155755658" />
+    <state x="489" y="323" key="git4idea.merge.GitPullDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1578278624583" />
     <state x="217" y="135" key="new project wizard" timestamp="1578150560356">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
