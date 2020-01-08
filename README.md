@@ -12,4 +12,5 @@ Wiser Frame 框架 快速创建相关类 插件
    * xml命名默认是以输入的类名来确定的，例如：（类名是A，选择WISERActivity，则默认生成xml是activity_a，选择WISERFragment以及其他的同理）。
 
 ## 架构大门
-[架构](https://github.com/Wiser-Wong/Frame.git)
+  * [架构](https://github.com/Wiser-Wong/Frame) 
+  * [架构AndroidX](https://github.com/Wiser-Wong/Frame-AndroidX)
