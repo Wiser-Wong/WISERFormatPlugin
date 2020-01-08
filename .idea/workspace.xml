@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22cb7cac-1e97-4a9d-94de-7358394ecf6f" name="Default Changelist" comment="" />
+    <list default="true" id="22cb7cac-1e97-4a9d-94de-7358394ecf6f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WISERFormatPlugin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/WISERFormatPlugin.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/plugin2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/plugin2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/CodeTool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/CodeTool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/InflateClass$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/InflateClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/InflateClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WISERFormatPlugin/com/wiser/plugin/dialog/WiserPluginDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wiser/plugin/CodeTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wiser/plugin/CodeTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wiser/plugin/InflateClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wiser/plugin/InflateClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wiser/plugin/dialog/WiserPluginDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wiser/plugin/dialog/WiserPluginDialog.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/wiser/plugin/dialog/WiserPluginDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wiser/plugin/dialog/WiserPluginDialog.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578278615959</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Wiser Frame 框架 快速创建相关类 插件">
+      <created>1578278646747</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578278646747</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -217,53 +247,53 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="603" y="235" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1578116814331" />
-    <state x="446" y="127" key="CommitChangelistDialog2" timestamp="1578278615717">
+    <state x="446" y="127" key="CommitChangelistDialog2" timestamp="1578278646589">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="446" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1578278615717" />
+    <state x="446" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1578278646589" />
     <state x="167" y="94" key="DiffContextDialog" timestamp="1578203177177">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="167" y="94" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1578203177177" />
-    <state width="1638" height="267" key="GridCell.Tab.0.bottom" timestamp="1578273748952">
+    <state width="1638" height="267" key="GridCell.Tab.0.bottom" timestamp="1578458838968">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="267" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1578273748952" />
+    <state width="1638" height="267" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1578458838968" />
     <state width="1638" height="267" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1578131751418" />
-    <state width="1638" height="267" key="GridCell.Tab.0.center" timestamp="1578273748951">
+    <state width="1638" height="267" key="GridCell.Tab.0.center" timestamp="1578458838967">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="267" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1578273748951" />
+    <state width="1638" height="267" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1578458838967" />
     <state width="1638" height="267" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1578131751412" />
-    <state width="1638" height="267" key="GridCell.Tab.0.left" timestamp="1578273748950">
+    <state width="1638" height="267" key="GridCell.Tab.0.left" timestamp="1578458838966">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="267" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1578273748950" />
+    <state width="1638" height="267" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1578458838966" />
     <state width="1638" height="267" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1578131751412" />
-    <state width="1638" height="267" key="GridCell.Tab.0.right" timestamp="1578273748951">
+    <state width="1638" height="267" key="GridCell.Tab.0.right" timestamp="1578458838967">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="267" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1578273748951" />
+    <state width="1638" height="267" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1578458838967" />
     <state width="1638" height="267" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1578131751416" />
-    <state width="1638" height="267" key="GridCell.Tab.1.bottom" timestamp="1578273748953">
+    <state width="1638" height="267" key="GridCell.Tab.1.bottom" timestamp="1578458838971">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="267" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1578273748953" />
+    <state width="1638" height="267" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1578458838971" />
     <state width="1638" height="267" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1578131751422" />
-    <state width="1638" height="267" key="GridCell.Tab.1.center" timestamp="1578273748952">
+    <state width="1638" height="267" key="GridCell.Tab.1.center" timestamp="1578458838969">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="267" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1578273748952" />
+    <state width="1638" height="267" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1578458838969" />
     <state width="1638" height="267" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1578131751419" />
-    <state width="1638" height="267" key="GridCell.Tab.1.left" timestamp="1578273748952">
+    <state width="1638" height="267" key="GridCell.Tab.1.left" timestamp="1578458838969">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="267" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1578273748952" />
+    <state width="1638" height="267" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1578458838969" />
     <state width="1638" height="267" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1578131751418" />
-    <state width="1638" height="267" key="GridCell.Tab.1.right" timestamp="1578273748953">
+    <state width="1638" height="267" key="GridCell.Tab.1.right" timestamp="1578458838970">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="267" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1578273748953" />
+    <state width="1638" height="267" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1578458838970" />
     <state width="1638" height="267" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1578131751420" />
     <state width="1638" height="363" key="GridCell.Tab.2.bottom" timestamp="1578116877278">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -294,31 +324,31 @@
     </state>
     <state x="341" y="155" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1578214936825" />
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1578068585896" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1578203182268">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1578278667958">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1578203182268" />
-    <state x="517" y="354" key="com.intellij.ide.util.TipDialog" timestamp="1578273876763">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1578278667958" />
+    <state x="517" y="354" key="com.intellij.ide.util.TipDialog" timestamp="1578411511005">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="517" y="354" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1578273876763" />
+    <state x="517" y="354" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1578411511005" />
     <state x="517" y="369" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1578068482180" />
-    <state x="498" y="160" width="683" height="729" key="find.popup" timestamp="1578202419688">
+    <state x="498" y="160" width="683" height="729" key="find.popup" timestamp="1578457800697">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="498" y="160" width="683" height="729" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1578202419688" />
-    <state x="489" y="323" key="git4idea.merge.GitPullDialog" timestamp="1578278624583">
+    <state x="498" y="160" width="683" height="729" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1578457800697" />
+    <state x="489" y="323" key="git4idea.merge.GitPullDialog" timestamp="1578278655253">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="489" y="323" key="git4idea.merge.GitPullDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1578278624583" />
+    <state x="489" y="323" key="git4idea.merge.GitPullDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1578278655253" />
     <state x="217" y="135" key="new project wizard" timestamp="1578150560356">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="217" y="135" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1578150560356" />
-    <state x="505" y="230" width="670" height="675" key="run.anything.popup" timestamp="1578202505188">
+    <state x="505" y="230" width="670" height="675" key="run.anything.popup" timestamp="1578457972874">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="230" width="670" height="675" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1578202505188" />
+    <state x="505" y="230" width="670" height="675" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1578457972874" />
     <state x="505" y="248" key="run.anything.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1578068573312" />
   </component>
 </project>

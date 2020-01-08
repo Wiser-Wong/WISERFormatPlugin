@@ -4,13 +4,13 @@
   <!-- 插件的名称，显示在 IDEA 已安装插件列表中 -->
   <name>Wiser Format Class</name>
   <!-- 插件版本号 -->
-  <version>1.0.1</version>
+  <version>1.0.0</version>
   <!-- 邮箱以及公司地址和公司名称 -->
   <vendor email="leng_xiaoyu513@163.com" url="https://github.com/Wiser-Wong/Frame.git">Wiser</vendor>
   <!-- 插件功能说明，显示在插件市场当前插件的副标题位置。 -->
   <description>与 Wiser Frame 架构配合使用，用来快速生成所需要的视图类以及相关的xml和业务类</description>
   <!-- 插件版本更新内容说明 -->
-  <change-notes>首次版本更新，主要用途创建JavaClass类以及JavaBiz业务类，还有xml文件</change-notes>
+  <change-notes>版本更新，新增创建kotlin类和kotlin Adapter类以及kotlin业务类</change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>

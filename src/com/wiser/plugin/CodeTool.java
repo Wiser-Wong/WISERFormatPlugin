@@ -1,7 +1,5 @@
 package com.wiser.plugin;
 
-import java.lang.*;
-
 /**
  * @author Wiser
  * 
@@ -10,13 +8,13 @@ import java.lang.*;
 public class CodeTool {
 
     /**
-     * WISERActivity 生成代码
+     * WISERActivity java生成代码
      *
      * @param dir 目录
      * @param className 类名
      * @return
      */
-    public static String WISERActivityCode(String dir, String className, boolean isCreateBiz) {
+    public static String WISERActivityJavaCode(String dir, String className, boolean isCreateBiz) {
 
         return "package "+ dir +";\n" +
                 "\n" +
@@ -45,12 +43,45 @@ public class CodeTool {
     }
 
     /**
-     * WISERActivityBiz 代码
+     * WISERActivity kotlin生成代码
+     *
+     * @param dir 目录
+     * @param className 类名
+     * @return
+     */
+    public static String WISERActivityKotlinCode(String dir, String className, boolean isCreateBiz) {
+
+        return "package " + dir + "\n" +
+                "\n" +
+                "import android.content.Intent\n" +
+                "import com.wiser.library.base.WISERActivity\n" +
+                "import com.wiser.library.base.WISERBuilder\n" +
+                "\n" +
+                "/**\n" +
+                " * @author\n" +
+                " *\n" +
+                " * \t\t" + className + "Activity" + " 描述\n" +
+                " */\n" +
+                "class "+ className + "Activity" +" : WISERActivity" + (isCreateBiz ? "<" + className + "ActivityBiz?" + ">()" : "<Nothing?>()") + "{\n" +
+                "\n" +
+                "    override fun build(builder: WISERBuilder): WISERBuilder {\n" +
+                "        builder.layoutId(R.layout." + "activity_" + className.toLowerCase() + ")\n" +
+                "        return builder\n" +
+                "    }\n" +
+                "\n" +
+                "    override fun initData(intent: Intent) {\n" +
+                "\n" +
+                "    }\n" +
+                "}";
+    }
+
+    /**
+     * WISERActivityBiz java代码
      * @param dir
      * @param className
      * @return
      */
-    public static String WISERActivityBizCode(String dir,String className){
+    public static String WISERActivityBizJavaCode(String dir, String className){
         return "package " + dir + ";\n" +
                 "\n" +
                 "import android.content.Intent;\n" +
@@ -72,13 +103,40 @@ public class CodeTool {
     }
 
     /**
-     * WISERFragment 生成代码
+     * WISERActivityBiz kotlin代码
+     * @param dir
+     * @param className
+     * @return
+     */
+    public static String WISERActivityBizKotlinCode(String dir, String className){
+        return "package " + dir + "\n" +
+                "\n" +
+                "import android.content.Intent\n" +
+                "import com.wiser.library.base.WISERBiz\n" +
+                "\n" +
+                "/**\n" +
+                " * @author\n" +
+                " *\n" +
+                " * \t\t" + className + "ActivityBiz" + " 描述\n" +
+                " */" +
+                "\n" +
+                "class " + className + "ActivityBiz" + " : WISERBiz<" + className + "Activity?>() {\n" +
+                "\n" +
+                "    override fun initBiz(intent: Intent) {\n" +
+                "        super.initBiz(intent)\n" +
+                "    }\n" +
+                "    \n" +
+                "}";
+    }
+
+    /**
+     * WISERFragment java生成代码
      *
      * @param dir 目录
      * @param className 类名
      * @return
      */
-    public static String WISERFragmentCode(String dir,String className, boolean isCreateBiz){
+    public static String WISERFragmentJavaCode(String dir, String className, boolean isCreateBiz){
         return "package "+ dir +";\n" +
                 "\n" +
                 "import android.os.Bundle;\n" +
@@ -92,7 +150,7 @@ public class CodeTool {
                 " * \t\t" + className + "Fragment" + " 描述\n" +
                 " */" +
                 "\n" +
-                "public class "+ className + "Fragment" +" extends WISERFragment"+ (isCreateBiz ? "<" + className + "FragmentBiz" + ">" : "") + " {\n" +
+                "public class " + className + "Fragment" + " extends WISERFragment" + (isCreateBiz ? "<" + className + "FragmentBiz" + ">" : "") + " {\n" +
                 "\n" +
                 "\t@Override protected WISERBuilder build(WISERBuilder builder) {\n" +
                 "\t    builder.layoutId(R.layout." + "fragment_" + className.toLowerCase() + ");\n" +
@@ -106,12 +164,45 @@ public class CodeTool {
     }
 
     /**
-     * WISERFragmentBiz 代码
+     * WISERFragment kotlin生成代码
+     *
+     * @param dir 目录
+     * @param className 类名
+     * @return
+     */
+    public static String WISERFragmentKotlinCode(String dir, String className, boolean isCreateBiz){
+        return "package " + dir + "\n" +
+                "\n" +
+                "import android.os.Bundle\n" +
+                "import com.wiser.library.base.WISERBuilder\n" +
+                "import com.wiser.library.base.WISERFragment\n" +
+                "\n" +
+                "/**\n" +
+                " * @author\n" +
+                " *\n" +
+                " * \t\t" + className + "Fragment" + " 描述\n" +
+                " */" +
+                "\n" +
+                "class " + className + "Fragment" + " : WISERFragment" + (isCreateBiz ? "<" + className + "FragmentBiz?" + ">()" : "<Nothing?>()") + " {\n" +
+                "    \n" +
+                "    override fun build(builder: WISERBuilder): WISERBuilder {\n" +
+                "        builder.layoutId(R.layout." + "fragment_" + className.toLowerCase() + ")\n" +
+                "        return builder\n" +
+                "    }\n" +
+                "\n" +
+                "    override fun initData(savedInstanceState: Bundle) {\n" +
+                "        \n" +
+                "    }\n" +
+                "}";
+    }
+
+    /**
+     * WISERFragmentBiz java代码
      * @param dir
      * @param className
      * @return
      */
-    public static String WISERFragmentBizCode(String dir,String className){
+    public static String WISERFragmentBizJavaCode(String dir, String className){
         return "package " + dir + ";\n" +
                 "\n" +
                 "import android.os.Bundle;\n" +
@@ -133,12 +224,39 @@ public class CodeTool {
     }
 
     /**
-     * WISERDialogFragment 代码
+     * WISERFragmentBiz java代码
      * @param dir
      * @param className
      * @return
      */
-    public static String WISERDialogFragmentCode(String dir,String className, boolean isCreateBiz){
+    public static String WISERFragmentBizKotlinCode(String dir, String className){
+        return "package " + dir + "\n" +
+                "\n" +
+                "import android.os.Bundle\n" +
+                "import com.wiser.library.base.WISERBiz\n" +
+                "\n" +
+                "/**\n" +
+                " * @author\n" +
+                " *\n" +
+                " * \t\t" + className + "FragmentBiz" + " 描述\n" +
+                " */" +
+                "\n" +
+                "class " + className + "FragmentBiz" + " : WISERBiz<" + className + "Fragment?>() {\n" +
+                "\n" +
+                "    override fun initBiz(bundle: Bundle) {\n" +
+                "        super.initBiz(bundle)\n" +
+                "    }\n" +
+                "    \n" +
+                "}";
+    }
+
+    /**
+     * WISERDialogFragment java代码
+     * @param dir
+     * @param className
+     * @return
+     */
+    public static String WISERDialogFragmentJavaCode(String dir, String className, boolean isCreateBiz){
         return "package "+ dir +";\n" +
                 "\n" +
                 "import android.os.Bundle;\n" +
@@ -152,7 +270,7 @@ public class CodeTool {
                 " * \t\t" + className + "DialogFragment" + " 描述\n" +
                 " */" +
                 "\n" +
-                "public class "+ className + "DialogFragment" +" extends WISERDialogFragment"+ (isCreateBiz ? "<" + className + "DialogFragmentBiz" + ">" : "") + " {\n" +
+                "public class "+ className + "DialogFragment" +" extends WISERDialogFragment" + (isCreateBiz ? "<" + className + "DialogFragmentBiz" + ">" : "") + " {\n" +
                 "\n" +
                 "\t@Override protected WISERBuilder build(WISERBuilder builder) {\n" +
                 "\t    builder.layoutId(R.layout." + "dialog_fragment_" + className.toLowerCase() + ");\n" +
@@ -186,12 +304,64 @@ public class CodeTool {
     }
 
     /**
-     * WISERDialogFragmentBiz 代码
+     * WISERDialogFragment kotlin代码
      * @param dir
      * @param className
      * @return
      */
-    public static String WISERDialogFragmentBizCode(String dir,String className){
+    public static String WISERDialogFragmentKotlinCode(String dir, String className, boolean isCreateBiz){
+        return "package " + dir + "\n" +
+                "\n" +
+                "import android.os.Bundle\n" +
+                "import com.wiser.library.base.WISERBuilder\n" +
+                "import com.wiser.library.base.WISERDialogFragment\n" +
+                "\n" +
+                "/**\n" +
+                " * @author\n" +
+                " *\n" +
+                " * \t\t" + className + "DialogFragment" + " 描述\n" +
+                " */" +
+                "\n" +
+                "class "+ className + "DialogFragment" +" : WISERDialogFragment" + (isCreateBiz ? "<" + className + "DialogFragmentBiz?" + ">()" : "<Nothing?>()") + " {\n" +
+                "\n" +
+                "    override fun build(builder: WISERBuilder): WISERBuilder {\n" +
+                "        builder.layoutId(R.layout." + "dialog_fragment_" + className.toLowerCase() + ")\n" +
+                "        return builder\n" +
+                "    }\n" +
+                "\n" +
+                "    override fun initData(savedInstanceState: Bundle) {\n" +
+                "        \n" +
+                "    }\n" +
+                "\n" +
+                "    override fun dialogWeight(): Int {\n" +
+                "        return 0\n" +
+                "    }\n" +
+                "\n" +
+                "    override fun dialogTheme(): Int {\n" +
+                "        return 0\n" +
+                "    }\n" +
+                "\n" +
+                "    override fun isWidthFullScreen(): Boolean {\n" +
+                "        return false\n" +
+                "    }\n" +
+                "\n" +
+                "    override fun isCloseOnTouchOutside(): Boolean {\n" +
+                "        return false\n" +
+                "    }\n" +
+                "\n" +
+                "    override fun isCloseOnTouchBack(): Boolean {\n" +
+                "        return false\n" +
+                "    }\n" +
+                "}";
+    }
+
+    /**
+     * WISERDialogFragmentBiz java代码
+     * @param dir
+     * @param className
+     * @return
+     */
+    public static String WISERDialogFragmentBizJavaCode(String dir, String className){
         return "package " + dir + ";\n" +
                 "\n" +
                 "import android.os.Bundle;\n" +
@@ -213,12 +383,39 @@ public class CodeTool {
     }
 
     /**
-     * WISERRVAdapter 代码
+     * WISERDialogFragmentBiz kotlin代码
      * @param dir
      * @param className
      * @return
      */
-    public static String WISERRVAdapter(String dir,String className){
+    public static String WISERDialogFragmentBizKotlinCode(String dir, String className){
+        return "package " + dir + "\n" +
+                "\n" +
+                "import android.os.Bundle\n" +
+                "import com.wiser.library.base.WISERBiz\n" +
+                "\n" +
+                "/**\n" +
+                " * @author\n" +
+                " *\n" +
+                " * \t\t" + className + "DialogFragmentBiz" + " 描述\n" +
+                " */" +
+                "\n" +
+                "class " + className + "DialogFragmentBiz" + " : WISERBiz<" + className + "DialogFragment?>() {\n" +
+                "\n" +
+                "    override fun initBiz(bundle: Bundle) {\n" +
+                "        super.initBiz(bundle)\n" +
+                "    }\n" +
+                "\n" +
+                "}";
+    }
+
+    /**
+     * WISERRVAdapter Java代码
+     * @param dir
+     * @param className
+     * @return
+     */
+    public static String WISERRVAdapterJavaCode(String dir, String className){
         return "package "+ dir +";\n" +
                 "\n" +
                 "import com.wiser.library.adapter.WISERHolder;\n" +
@@ -263,12 +460,50 @@ public class CodeTool {
     }
 
     /**
-     * WISERService 代码
+     * WISERRVAdapter kotlin代码
      * @param dir
      * @param className
      * @return
      */
-    public static String WISERServiceCode(String dir,String className, boolean isCreateBiz){
+    public static String WISERRVAdapterKotlinCode(String dir, String className){
+        return "package " + dir + "\n" +
+                "\n" +
+                "import android.view.View\n" +
+                "import android.view.ViewGroup\n" +
+                "import com.wiser.library.adapter.WISERHolder\n" +
+                "import com.wiser.library.adapter.WISERRVAdapter\n" +
+                "import com.wiser.library.base.WISERActivity\n" +
+                "\n" +
+                "import android.support.annotation.NonNull\n" +
+                "\n" +
+                "/**\n" +
+                " * @author\n" +
+                " *\n" +
+                " * \t\t" + className + "Adapter" + " 描述\n" +
+                " */" +
+                "\n" +
+                "class "+ className + "Adapter" + "(wiserActivity: WISERActivity<*>?) : WISERRVAdapter<" + className + "Adapter" + "." + className + "Model?, " + className + "Adapter" + "." + className + "Holder" + ">(wiserActivity) {\n" +
+                "\n" +
+                "    override fun newViewHolder(viewGroup: ViewGroup, type: Int): " + className + "Holder" + " {\n" +
+                "        return " + className + "Holder" + "(inflate(viewGroup, R.layout." + "item_" + className.toLowerCase() + "))\n" +
+                "    }\n" +
+                "\n" +
+                "    inner class " + className + "Holder" + " internal constructor(@NonNull itemView: View?) : WISERHolder<" + className + "Model" + "?>(itemView!!) {\n" +
+                "        override fun bindData(model: " + className + "Model" + "?, position: Int) {\n" +
+                "        }\n" +
+                "    }\n" +
+                "\n" +
+                "    class " + className + "Model" + "\n" +
+                "}";
+    }
+
+    /**
+     * WISERService java代码
+     * @param dir
+     * @param className
+     * @return
+     */
+    public static String WISERServiceJavaCode(String dir, String className, boolean isCreateBiz){
         return "package " + dir + ";\n" +
                 "\n" +
                 "import android.content.Intent;\n" +
@@ -293,12 +528,42 @@ public class CodeTool {
     }
 
     /**
-     * WISERServiceBiz 代码
+     * WISERService kotlin代码
      * @param dir
      * @param className
      * @return
      */
-    public static String WISERServiceBizCode(String dir,String className){
+    public static String WISERServiceKotlinCode(String dir, String className, boolean isCreateBiz){
+        return "package " + dir + "\n" +
+                "\n" +
+                "import android.content.Intent\n" +
+                "import com.wiser.library.service.WISERService\n" +
+                "\n" +
+                "/**\n" +
+                " * @author\n" +
+                " *\n" +
+                " * \t\t" + className + "Service" + " 描述\n" +
+                " */" +
+                "\n" +
+                "class " + className + "Service" + " : WISERService" + (isCreateBiz ? "<" + className + "ServiceBiz?" + ">()" : "<Nothing?>()") + " {\n" +
+                "    \n" +
+                "    override fun running(intent: Intent, flags: Int, startId: Int) {\n" +
+                "        \n" +
+                "    }\n" +
+                "    \n" +
+                "    override fun initData() {\n" +
+                "        \n" +
+                "    }\n" +
+                "}";
+    }
+
+    /**
+     * WISERServiceBiz java代码
+     * @param dir
+     * @param className
+     * @return
+     */
+    public static String WISERServiceBizJavaCode(String dir, String className){
         return "package " + dir + ";\n" +
                 "\n" +
                 "import android.os.Bundle;\n" +
@@ -317,6 +582,33 @@ public class CodeTool {
                 "        super.initBiz(intent);\n" +
                 "    }\n" +
                 "}\n";
+    }
+
+    /**
+     * WISERServiceBiz java代码
+     * @param dir
+     * @param className
+     * @return
+     */
+    public static String WISERServiceBizKotlinCode(String dir, String className){
+        return "package " + dir + "\n" +
+                "\n" +
+                "import android.content.Intent\n" +
+                "import com.wiser.library.base.WISERBiz\n" +
+                "\n" +
+                "/**\n" +
+                " * @author\n" +
+                " *\n" +
+                " * \t\t" + className + "ServiceBiz" + " 描述\n" +
+                " */" +
+                "\n" +
+                "class " + className + "ServiceBiz" + " : WISERBiz<" + className + "Service?>() {\n" +
+                "    \n" +
+                "    override fun initBiz(intent: Intent) {\n" +
+                "        super.initBiz(intent)\n" +
+                "    }\n" +
+                "    \n" +
+                "}";
     }
 
     /**

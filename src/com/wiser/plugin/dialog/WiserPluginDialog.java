@@ -8,7 +8,9 @@ import com.wiser.plugin.InflateClass;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  * @author Wiser
@@ -25,8 +27,6 @@ public class WiserPluginDialog extends JDialog {
 
 	private JTextField textClassName;
 
-	private ButtonGroup group;
-
 	private JRadioButton radioButtonView;
 
 	private JRadioButton radioButtonAdapter;
@@ -36,6 +36,10 @@ public class WiserPluginDialog extends JDialog {
 	private JComboBox<String> comboBoxExpand;
 
 	private JCheckBox checkBoxIsBiz;
+
+	private JRadioButton radioButtonJava;
+
+	private JRadioButton radioButtonKotlin;
 
 	private String selectExpandClassName = "WISERActivity";
 
@@ -55,67 +59,36 @@ public class WiserPluginDialog extends JDialog {
 		setModal(true);
 		getRootPane().setDefaultButton(buttonOK);
 
-		// 单选框View和Adapter
-		group = new ButtonGroup();
+		// 单选框View和Adapter和Service
+		ButtonGroup groupType = new ButtonGroup();
 		radioButtonView.setSelected(true);
-		group.add(radioButtonView);
-		group.add(radioButtonAdapter);
-		group.add(radioButtonService);
+		groupType.add(radioButtonView);
+		groupType.add(radioButtonAdapter);
+		groupType.add(radioButtonService);
+
+		// 单选框Java和Kotlin
+		ButtonGroup groupLanguage = new ButtonGroup();
+		radioButtonJava.setSelected(true);
+		groupLanguage.add(radioButtonJava);
+		groupLanguage.add(radioButtonKotlin);
 
 		// 默认下拉窗View
 		switchClassType(0);
 
-		radioButtonView.addActionListener(new ActionListener() {
+		radioButtonView.addActionListener(actionEvent -> switchClassType(0));
 
-			@Override
-			public void actionPerformed(ActionEvent actionEvent) {
-				switchClassType(0);
-			}
+		radioButtonAdapter.addActionListener(actionEvent -> switchClassType(1));
+
+		radioButtonService.addActionListener(actionEvent -> switchClassType(2));
+
+		checkBoxIsBiz.addActionListener(actionEvent -> {
 		});
 
-		radioButtonAdapter.addActionListener(new ActionListener() {
+		comboBoxExpand.addItemListener(itemEvent -> selectExpandClassName = (String) itemEvent.getItem());
 
-			@Override
-			public void actionPerformed(ActionEvent actionEvent) {
-				switchClassType(1);
-			}
-		});
+		buttonOK.addActionListener(e -> onOK());
 
-		radioButtonService.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent actionEvent) {
-				switchClassType(2);
-			}
-		});
-
-		checkBoxIsBiz.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent actionEvent) {
-			}
-		});
-
-		comboBoxExpand.addItemListener(new ItemListener() {
-
-			public void itemStateChanged(ItemEvent itemEvent) {
-				selectExpandClassName = (String) itemEvent.getItem();
-			}
-		});
-
-		buttonOK.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				onOK();
-			}
-		});
-
-		buttonCancel.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				onCancel();
-			}
-		});
+		buttonCancel.addActionListener(e -> onCancel());
 
 		// call onCancel() when cross is clicked
 		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -127,12 +100,7 @@ public class WiserPluginDialog extends JDialog {
 		});
 
 		// call onCancel() on ESCAPE
-		contentPane.registerKeyboardAction(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-				onCancel();
-			}
-		}, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+		contentPane.registerKeyboardAction(e -> onCancel(), KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
 	}
 
@@ -179,9 +147,10 @@ public class WiserPluginDialog extends JDialog {
 		// }
 
 		new InflateClass(event).writeAction(textClassName.getText(),
-				(selectExpandClassName == views[0] ? 1
-						: selectExpandClassName == views[1] ? 2 : selectExpandClassName == views[2] ? 3 : selectExpandClassName == adapters[0] ? 4 : selectExpandClassName == services[0] ? 5 : 1),
-				checkBoxIsBiz.isSelected());
+				(selectExpandClassName.equals(views[0]) ? 1
+						: selectExpandClassName.equals(views[1]) ? 2
+						: selectExpandClassName.equals(views[2]) ? 3 : selectExpandClassName.equals(adapters[0]) ? 4 : selectExpandClassName.equals(services[0]) ? 5 : 1),
+				checkBoxIsBiz.isSelected(), radioButtonJava.isSelected());
 
 		dispose();
 
@@ -217,10 +186,10 @@ public class WiserPluginDialog extends JDialog {
 	 */
 	private void $$$setupUI$$$() {
 		contentPane = new JPanel();
-		contentPane.setLayout(new GridLayoutManager(4, 2, new Insets(15, 15, 15, 15), -1, -1));
+		contentPane.setLayout(new GridLayoutManager(5, 2, new Insets(15, 15, 15, 15), -1, -1));
 		final JPanel panel1 = new JPanel();
 		panel1.setLayout(new GridLayoutManager(1, 1, new Insets(10, 0, 0, 0), -1, -1));
-		contentPane.add(panel1, new GridConstraints(3, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null, 0, false));
+		contentPane.add(panel1, new GridConstraints(4, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null, 0, false));
 		final JPanel panel2 = new JPanel();
 		panel2.setLayout(new GridLayoutManager(1, 4, new Insets(0, 0, 0, 0), -1, -1));
 		panel1.add(panel2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
@@ -236,8 +205,8 @@ public class WiserPluginDialog extends JDialog {
 		final Spacer spacer1 = new Spacer();
 		panel2.add(spacer1, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
 		final JPanel panel3 = new JPanel();
-		panel3.setLayout(new GridLayoutManager(1, 4, new Insets(0, 0, 0, 0), -1, -1));
-		contentPane.add(panel3, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+		panel3.setLayout(new GridLayoutManager(1, 4, new Insets(10, 0, 0, 0), -1, -1));
+		contentPane.add(panel3, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, true));
 		final JLabel label1 = new JLabel();
 		label1.setText("类名：");
 		label1.setToolTipText("类名：");
@@ -246,7 +215,7 @@ public class WiserPluginDialog extends JDialog {
 		panel3.add(textClassName, new GridConstraints(0, 1, 1, 3, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
 		final JPanel panel4 = new JPanel();
 		panel4.setLayout(new GridLayoutManager(1, 4, new Insets(10, 0, 0, 0), -1, -1));
-		contentPane.add(panel4, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+		contentPane.add(panel4, new GridConstraints(2, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
 		final JLabel label2 = new JLabel();
 		label2.setText("类型：");
 		panel4.add(label2, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -261,12 +230,24 @@ public class WiserPluginDialog extends JDialog {
 		panel4.add(radioButtonService, new GridConstraints(0, 3, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
 		final JPanel panel5 = new JPanel();
 		panel5.setLayout(new GridLayoutManager(1, 2, new Insets(10, 0, 0, 0), -1, -1));
-		contentPane.add(panel5, new GridConstraints(2, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+		contentPane.add(panel5, new GridConstraints(3, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
 		final JLabel label3 = new JLabel();
 		label3.setText("继承：");
 		panel5.add(label3, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
 		comboBoxExpand = new JComboBox();
 		panel5.add(comboBoxExpand, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+		final JPanel panel6 = new JPanel();
+		panel6.setLayout(new GridLayoutManager(1, 3, new Insets(10, 0, 0, 0), -1, -1));
+		contentPane.add(panel6, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+		final JLabel label4 = new JLabel();
+		label4.setText("语言：");
+		panel6.add(label4, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+		radioButtonJava = new JRadioButton();
+		radioButtonJava.setText("Java");
+		panel6.add(radioButtonJava, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+		radioButtonKotlin = new JRadioButton();
+		radioButtonKotlin.setText("Kotlin");
+		panel6.add(radioButtonKotlin, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
 	}
 
 	/**
