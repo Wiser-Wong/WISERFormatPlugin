@@ -14,7 +14,7 @@ import java.awt.event.WindowEvent;
 
 /**
  * @author Wiser
- *
+ * 
  *         插件弹窗
  */
 public class WiserPluginDialog extends JDialog {
