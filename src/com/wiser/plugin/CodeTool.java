@@ -190,7 +190,7 @@ public class CodeTool {
                 "        return builder\n" +
                 "    }\n" +
                 "\n" +
-                "    override fun initData(savedInstanceState: Bundle) {\n" +
+                "    override fun initData(savedInstanceState: Bundle?) {\n" +
                 "        \n" +
                 "    }\n" +
                 "}";
@@ -329,7 +329,7 @@ public class CodeTool {
                 "        return builder\n" +
                 "    }\n" +
                 "\n" +
-                "    override fun initData(savedInstanceState: Bundle) {\n" +
+                "    override fun initData(savedInstanceState: Bundle?) {\n" +
                 "        \n" +
                 "    }\n" +
                 "\n" +
